@@ -1,0 +1,688 @@
+{
+  "common": {
+    "error": "Se produjo un error",
+    "success": "Éxito",
+    "cancelled": "Cancelado",
+    "timeout": "Esta interacción ha expirado",
+    "noPermission": "No tienes permiso para usar este comando",
+    "botNoPermission": "No tengo los permisos necesarios para ejecutar este comando",
+    "guildOnly": "Este comando solo se puede usar en un servidor",
+    "ownerOnly": "Este comando solo puede ser usado por el propietario del bot",
+    "cooldown": "Por favor espera {{time}} antes de usar este comando nuevamente",
+    "invalidUser": "Usuario inválido",
+    "invalidChannel": "Canal inválido",
+    "invalidRole": "Rol inválido",
+    "yes": "Sí",
+    "no": "No",
+    "enabled": "Habilitado",
+    "disabled": "Deshabilitado",
+    "none": "Ninguno",
+    "unknown": "Desconocido",
+    "noReasonProvided": "No se proporcionó razón",
+    "seconds": "segundos",
+    "hours": "horas",
+    "disable": "Deshabilitar",
+    "enable": "Habilitar",
+    "notYourButton": "No puedes usar este botón",
+    "featureNotImplemented": "Esta función aún no está implementada"
+  },
+  "commands": {
+    "ping": {
+      "description": "Verificar la latencia del bot",
+      "response": "¡Pong! Latencia: {{latency}}ms | Latencia API: {{apiLatency}}ms"
+    },
+    "help": {
+      "description": "Obtener ayuda con los comandos",
+      "title": "Menú de Ayuda",
+      "commandInfo": "Información del Comando",
+      "usage": "Uso",
+      "cooldown": "Tiempo de espera",
+      "cooldownValue": "{{seconds}} segundos",
+      "permissions": "Permisos Requeridos",
+      "category": "Categoría",
+      "noDescription": "Sin descripción disponible",
+      "menuFooter": "Usa /utils help <comando> para información detallada del comando",
+      "commandFooter": "<> = requerido, [] = opcional",
+      "commandNotFound": "Comando no encontrado",
+      "commandName": "Comando",
+      "subcommands": "Subcomandos",
+      "categories": {
+        "utility": "Utilidad",
+        "moderation": "Moderación",
+        "economy": "Economía",
+        "xp": "Sistema XP",
+        "giveaways": "Sorteos",
+        "tickets": "Tickets",
+        "fun": "Diversión",
+        "admin": "Administrador"
+      }
+    },
+    "utils": {
+      "description": "Comandos de utilidad para obtener información variada",
+      "avatar": {
+        "title": "Avatar de {{user}}",
+        "footer": "URL del Avatar"
+      },
+      "banner": {
+        "title": "Banner de {{user}}",
+        "footer": "URL del Banner",
+        "noBanner": "{{user}} no tiene un banner",
+        "error": "Error al obtener el banner"
+      },
+      "steam": {
+        "notFound": "Perfil de Steam no encontrado",
+        "error": "Error al obtener el perfil de Steam",
+        "status": "Estado",
+        "visibility": "Visibilidad",
+        "created": "Creado",
+        "playing": "Jugando actualmente",
+        "realName": "Nombre real",
+        "country": "País",
+        "unknown": "Desconocido",
+        "footer": "Perfil de Steam",
+        "statusOffline": "Desconectado",
+        "statusOnline": "En línea",
+        "statusBusy": "Ocupado",
+        "statusAway": "Ausente",
+        "statusSnooze": "Durmiendo",
+        "statusLookingToTrade": "Buscando intercambiar",
+        "statusLookingToPlay": "Buscando jugar",
+        "visibilityPrivate": "Privado",
+        "visibilityFriendsOnly": "Solo amigos",
+        "visibilityPublic": "Público"
+      },
+      "userinfo": {
+        "title": "Información del Usuario - {{user}}",
+        "username": "Nombre de usuario",
+        "id": "ID de Usuario",
+        "bot": "Bot",
+        "created": "Cuenta creada",
+        "joined": "Se unió al servidor",
+        "nickname": "Apodo",
+        "roles": "Roles",
+        "permissions": "Permisos clave",
+        "badges": "Insignias",
+        "footer": "Info del Usuario"
+      },
+      "whois": {
+        "title": "Búsqueda de Usuario",
+        "tag": "Etiqueta",
+        "inServer": "En este servidor",
+        "notFound": "Usuario no encontrado",
+        "footer": "Búsqueda por ID"
+      },
+      "roleinfo": {
+        "title": "Información del Rol - {{role}}",
+        "name": "Nombre",
+        "id": "ID del Rol",
+        "color": "Color",
+        "position": "Posición",
+        "mentionable": "Mencionable",
+        "hoisted": "Separado",
+        "created": "Creado",
+        "members": "Miembros",
+        "permissions": "Permisos",
+        "footer": "Info del Rol"
+      },
+      "serverinfo": {
+        "title": "Información del Servidor",
+        "name": "Nombre",
+        "id": "ID del Servidor",
+        "owner": "Propietario",
+        "created": "Creado",
+        "members": "Miembros",
+        "membersValue": "Total: {{total}}\nHumanos: {{humans}}\nBots: {{bots}}",
+        "channels": "Canales",
+        "channelsValue": "Total: {{total}}\nTexto: {{text}}\nVoz: {{voice}}\nCategorías: {{categories}}",
+        "roles": "Roles",
+        "emojis": "Emojis",
+        "boosts": "Mejoras del Servidor",
+        "boostsValue": "Nivel {{level}} ({{boosts}} mejoras)",
+        "description": "Descripción",
+        "features": "Características",
+        "footer": "Info del Servidor"
+      },
+      "support": {
+        "title": "Servidor de Soporte",
+        "description": "¿Necesitas ayuda con Pegasus? ¡Únete a nuestro servidor de soporte!",
+        "link": "Enlace del Servidor de Soporte",
+        "footer": "Soporte de Pegasus"
+      }
+    },
+    "economy": {
+      "description": "Comandos del sistema económico",
+      "balance": {
+        "description": "Consulta tu saldo o el de otro usuario",
+        "title": "{{symbol}} Saldo",
+        "userBalance": "**Saldo de {{user}}**",
+        "wallet": "Cartera",
+        "bank": "Banco",
+        "netWorth": "Patrimonio Neto",
+        "statistics": "Estadísticas",
+        "totalEarned": "Total ganado: {{symbol}} {{amount}}",
+        "totalSpent": "Total gastado: {{symbol}} {{amount}}",
+        "totalGambled": "Total apostado: {{symbol}} {{amount}}",
+        "recentTransactions": "Transacciones Recientes",
+        "currency": "Moneda: {{name}}"
+      },
+      "daily": {
+        "description": "Reclama tu recompensa diaria",
+        "success": "¡Recompensa Diaria Reclamada!",
+        "received": "¡Recibiste tu recompensa diaria!",
+        "reward": "Recompensa",
+        "streak": "Racha",
+        "newBalance": "Nuevo Saldo",
+        "streakBonus": "Bonus de Racha",
+        "streakBonusText": "¡Ganaste {{symbol}}{{amount}} extra por tu racha de {{days}} días!",
+        "cooldown": "Puedes reclamar tu recompensa diaria en {{hours}}h {{minutes}}m",
+        "comeback": "¡Vuelve mañana para más recompensas!"
+      },
+      "work": {
+        "description": "Trabaja para ganar dinero",
+        "success": "¡Trabajo Completado!",
+        "earned": "Ganado",
+        "newBalance": "Nuevo Saldo",
+        "cooldown": "Puedes trabajar de nuevo en {{minutes}}m {{seconds}}s",
+        "cooldownFooter": "Puedes trabajar de nuevo en {{minutes}} minutos"
+      },
+      "rob": {
+        "description": "Intenta robar a otro usuario",
+        "selfError": "¡No puedes robarte a ti mismo!",
+        "botError": "¡No puedes robar a los bots!",
+        "protectedTitle": "Robo Fallido - ¡Protegido!",
+        "protectedText": "¡{{user}} tiene protección contra robos! No puedes robarle.",
+        "protectedFooter": "¡Compra protección en la tienda para protegerte!",
+        "successTitle": "¡Robo Exitoso!",
+        "successText": "¡Robaste exitosamente a {{user}}!",
+        "failedTitle": "¡Robo Fallido!",
+        "failedText": "¡Te atraparon intentando robar a {{user}}!",
+        "amountStolen": "Cantidad Robada",
+        "fine": "Multa",
+        "yourBalance": "Tu Saldo",
+        "victimBalance": "Saldo de la Víctima",
+        "notEnoughMoney": "Este usuario no tiene suficiente dinero para robar",
+        "disabled": "Robar está deshabilitado en este servidor",
+        "cooldown": "Puedes robar de nuevo en {{hours}}h {{minutes}}m"
+      },
+      "gamble": {
+        "description": "Juega varios juegos de azar",
+        "rateLimited": "Has estado apostando demasiado seguido. Tómate un descanso y vuelve más tarde.",
+        "invalidBet": "La apuesta debe estar entre {{symbol}}{{min}} y {{symbol}}{{max}}",
+        "insufficientFunds": "Fondos insuficientes o apuesta inválida",
+        "common": {
+          "result": "Resultado",
+          "wonLabel": "Ganado",
+          "lostLabel": "Perdido",
+          "returnedLabel": "Devuelto",
+          "newBalance": "Nuevo saldo",
+          "multiplier": "Multiplicador",
+          "yourChoice": "Tu elección"
+        },
+        "dice": {
+          "description": "Tira los dados contra el crupier",
+          "title": "🎲 Juego de Dados",
+          "tie": "¡Es un empate!",
+          "won": "¡Ganaste!",
+          "lost": "¡Perdiste!",
+          "yourRoll": "Tu Tirada",
+          "dealerRoll": "Tirada del Crupier",
+          "result": "Resultado",
+          "push": "Empate"
+        },
+        "coinflip": {
+          "description": "Lanza una moneda",
+          "title": "🪙 Lanzamiento de Moneda",
+          "landed": "¡La moneda cayó en **{{result}}**!",
+          "yourChoice": "Tu Elección",
+          "resultField": "Resultado del lanzamiento"
+        },
+        "slots": {
+          "description": "Juega a la máquina tragamonedas",
+          "title": "🎰 Máquina Tragamonedas",
+          "jackpot": "💰 ¡JACKPOT! 💰",
+          "triple": "🎉 ¡Triple Coincidencia!",
+          "double": "✨ ¡Doble Coincidencia!",
+          "noMatch": "Sin coincidencia",
+          "jackpotWin": "🎊 ¡Felicitaciones!",
+          "jackpotText": "¡Ganaste el JACKPOT con triple 7s! ¡{{multiplier}}x multiplicador!"
+        },
+        "blackjack": {
+          "description": "Juega al blackjack contra el crupier",
+          "title": "🃏 Blackjack",
+          "yourHand": "Tu Mano",
+          "dealerHand": "Mano del Crupier",
+          "value": "Valor: {{value}}",
+          "blackjack": " - ¡Blackjack!",
+          "bust": " - ¡Pasado!",
+          "push": "Empate",
+          "returned": "Devuelto",
+          "blackjackWin": "🎊 **¡BLACKJACK!** ¡Obtuviste 21 con tus primeras dos cartas!"
+        },
+        "roulette": {
+          "description": "Juega a la ruleta",
+          "title": "🎰 Ruleta",
+          "landed": "La bola cayó en **{{emoji}} {{number}}**",
+          "yourBet": "Tu Apuesta",
+          "result": "Resultado",
+          "multiplier": "Multiplicador",
+          "numberRequired": "Por favor especifica un número para apostar (0-36)"
+        },
+        "stats": {
+          "winRate": "Tasa de Victoria: {{rate}}% | Racha: {{streak}}",
+          "gamesPlayed": "Tasa de Victoria: {{rate}}% | Juegos Jugados: {{games}}",
+          "bestWin": "Tasa de Victoria: {{rate}}% | Mejor Ganancia: {{symbol}}{{amount}}",
+          "totalWagered": "Tasa de Victoria: {{rate}}% | Total Apostado: {{symbol}}{{amount}}"
+        }
+      },
+      "shop": {
+        "description": "Comandos de la tienda",
+        "view": {
+          "description": "Ver artículos disponibles en la tienda",
+          "title": "{{symbol}} Tienda",
+          "balance": "Tu saldo: {{symbol}}{{amount}}",
+          "page": "Página {{current}}/{{total}} • Usa /shop buy <artículo> para comprar",
+          "stock": "Inventario",
+          "unlimited": "Ilimitado",
+          "left": "{{amount}} restantes",
+          "price": "Precio",
+          "effect": "Efecto",
+          "empty": "La tienda está actualmente vacía. Por favor contacta a un administrador.",
+          "notForYou": "¡Esta vista de la tienda no es para ti!"
+        },
+        "buy": {
+          "description": "Comprar un artículo de la tienda",
+          "itemNotFound": "¡Artículo no encontrado en la tienda!",
+          "success": "¡Compra Exitosa!",
+          "purchased": "¡Compraste **{{quantity}}x {{item}}**!",
+          "totalCost": "Costo Total"
+        },
+        "inventory": {
+          "description": "Ver tus artículos comprados",
+          "title": "📦 Tu Inventario",
+          "itemCount": "Tienes {{count}} artículo{{s}} único{{s}}",
+          "empty": "¡Tu inventario está vacío! Visita la tienda para comprar artículos.",
+          "expires": "Expira",
+          "effect": "Efecto"
+        },
+        "effects": {
+          "robProtection": "🛡️ Protección contra robos por {{hours}} horas",
+          "xpBoost": "📈 {{multiplier}}x impulso de XP por {{hours}} horas",
+          "luckBoost": "🍀 Aumenta la tasa de victoria en apuestas en {{bonus}}% por {{hours}} horas",
+          "workBoost": "💪 Aumenta las recompensas de trabajo en {{percent}}% por {{hours}} horas",
+          "bankAccess": "🏦 Te permite guardar dinero en el banco ({{uses}} uso{{s}})",
+          "role": "🎭 Otorga un rol especial",
+          "special": "✨ Efecto especial"
+        }
+      },
+      "errors": {
+        "general": "No se pudo procesar la solicitud. Por favor inténtalo más tarde.",
+        "insufficientFunds": "Fondos insuficientes",
+        "invalidAmount": "Cantidad inválida",
+        "userNotFound": "Usuario no encontrado",
+        "itemNotFound": "Artículo no encontrado",
+        "notEnoughStock": "No hay suficiente inventario disponible"
+      }
+    },
+    "warn": {
+      "description": "Gestionar advertencias",
+      "subcommands": {
+        "create": {
+          "description": "Advertir a un usuario",
+          "options": {
+            "user": "El usuario a advertir",
+            "title": "Título de la advertencia",
+            "description": "Descripción de la advertencia",
+            "level": "Nivel de advertencia (predeterminado: 1)",
+            "proof": "Archivo adjunto de prueba"
+          },
+          "success": "Se advirtió exitosamente a {{user}}",
+          "embed": {
+            "title": "Advertencia emitida",
+            "warnId": "ID de advertencia",
+            "level": "Nivel"
+          }
+        },
+        "edit": {
+          "description": "Editar una advertencia",
+          "options": {
+            "warnid": "El ID de advertencia a editar"
+          },
+          "modal": {
+            "title": "Editar advertencia",
+            "titleField": "Título de advertencia",
+            "descriptionField": "Descripción de advertencia"
+          },
+          "success": "Advertencia {{warnId}} editada exitosamente",
+          "notFound": "Advertencia no encontrada"
+        },
+        "lookup": {
+          "description": "Buscar una advertencia específica",
+          "options": {
+            "warnid": "El ID de advertencia a buscar"
+          },
+          "notFound": "Advertencia {{warnId}} no encontrada"
+        },
+        "delete": {
+          "description": "Eliminar una advertencia",
+          "options": {
+            "warnid": "El ID de advertencia a eliminar"
+          },
+          "success": {
+            "title": "Advertencia eliminada",
+            "description": "La advertencia {{warnId}} ha sido eliminada.",
+            "target": "Objetivo",
+            "moderator": "Moderador"
+          },
+          "notFound": "Advertencia {{warnId}} no encontrada",
+          "error": "No se pudo eliminar la advertencia"
+        },
+        "view": {
+          "description": "Ver todas las advertencias de un usuario",
+          "options": {
+            "user": "El usuario para ver sus advertencias"
+          },
+          "title": "Advertencias para {{user}}",
+          "noWarnings": "No se encontraron advertencias para {{user}}",
+          "stats": "Total de advertencias: {{count}} | Nivel total: {{level}}"
+        },
+        "purge": {
+          "description": "Eliminar todas las advertencias de un usuario",
+          "options": {
+            "user": "El usuario cuyas advertencias se eliminarán"
+          },
+          "noWarnings": "{{user}} no tiene advertencias activas para eliminar.",
+          "success": {
+            "title": "Advertencias eliminadas",
+            "description": "Se eliminaron {{count}} advertencia(s) de {{user}}.",
+            "target": "Objetivo",
+            "moderator": "Moderador"
+          }
+        },
+        "automation": {
+          "create": {
+            "description": "Crear una automatización de advertencias",
+            "options": {
+              "notifyChannel": "Canal que recibirá las alertas de la automatización"
+            },
+            "modal": {
+              "title": "Crear automatización de advertencias",
+              "name": "Nombre de automatización",
+              "description": "Descripción de automatización",
+              "triggerType": "Tipo de activador (warn_count o warn_level)",
+              "triggerValue": "Valor del activador",
+              "action": "Acción de automatización (preajuste)",
+              "message": "Mensaje a enviar (opcional)"
+            },
+            "prompt": "Pulsa el botón de abajo para terminar de configurar la automatización.",
+            "button": "Abrir asistente de automatización",
+            "success": "Automatización {{name}} creada exitosamente",
+            "invalidJson": "Formato JSON inválido para acciones",
+            "invalidAction": "Acción inválida. Elige: 1d Timeout, 1w Timeout, kick, ban, sendMessageOnly",
+            "messageRequired": "Se requiere un mensaje cuando se usa sendMessageOnly",
+            "missingTrigger": "Falta la configuración del activador. Vuelve a ejecutar /warn automation create."
+          },
+          "view": {
+            "description": "Ver todas las automatizaciones de advertencias",
+            "title": "Automatizaciones de advertencias",
+            "noAutomations": "No hay automatizaciones configuradas",
+            "fields": {
+              "trigger": "Activador",
+              "actions": "Acciones",
+              "status": "Estado",
+              "lastTriggered": "Última activación",
+              "channel": "Canal"
+            }
+          },
+          "delete": {
+            "description": "Eliminar una automatización de advertencias",
+            "options": {
+              "automationid": "El ID de automatización a eliminar"
+            },
+            "success": "Automatización {{automationId}} eliminada exitosamente",
+            "notFound": "Automatización no encontrada"
+          }
+        }
+      }
+    }
+  },
+  "warnings": {
+    "automation": {
+      "triggered": "Automatización de advertencias activada",
+      "description": "El usuario **{{user}}** ({{userId}}) ha activado la automatización **{{automation}}**\n\nAdvertencias: {{count}}\nNivel total: {{level}}"
+    },
+    "actions": {
+      "ban": "Banear usuario",
+      "kick": "Expulsar usuario",
+      "mute": "Silenciar ({{duration}}m)",
+      "timeout": "Timeout ({{duration}})",
+      "view": "Ver advertencias"
+    },
+    "embed": {
+      "title": "Título",
+      "user": "Usuario",
+      "moderator": "Moderador",
+      "level": "Nivel",
+      "description": "Descripción",
+      "edited": "Editado por {{editor}} el {{date}}"
+    }
+  },
+  "tickets": {
+    "maxTicketsReached": "Has alcanzado el número máximo de tickets abiertos ({{max}})",
+    "ticketCreated": "Ticket #{{number}}",
+    "welcomeMessage": "El personal de soporte estará con usted en breve. Por favor, describa su problema en detalle.",
+    "createdBy": "Creado por",
+    "reason": "Razón",
+    "noReason": "No se proporcionó razón",
+    "close": "Cerrar",
+    "closeWithReason": "Cerrar con razón",
+    "lock": "Bloquear",
+    "freeze": "Congelar",
+    "claim": "Reclamar",
+    "ticketCreatedLog": "Ticket creado por {{user}}\nRazón: {{reason}}",
+    "alreadyClaimed": "Este ticket ya ha sido reclamado",
+    "claimedBy": "Ticket reclamado por {{user}}",
+    "closedBy": "Ticket cerrado por {{user}}\nRazón: {{reason}}",
+    "lockedBy": "Ticket bloqueado por {{user}}",
+    "frozenBy": "Ticket congelado por {{user}}",
+    "createTicket": "Crear Ticket",
+    "reasonLabel": "Por favor describa su problema",
+    "reasonPlaceholder": "Proporcione una descripción detallada de su problema...",
+    "closeTicket": "Cerrar Ticket",
+    "closeReasonLabel": "Razón para cerrar (opcional)",
+    "closeReasonPlaceholder": "Proporcione una razón para cerrar este ticket...",
+    "panelCreation": "Creación de Panel",
+    "configuringPanel": "Configurando panel: {{id}}",
+    "title": "Título",
+    "buttonLabel": "Etiqueta del botón",
+    "maxTicketsPerUser": "Máx. tickets por usuario",
+    "addMoreRoles": "Agregar más roles",
+    "setImage": "Establecer imagen",
+    "setFooter": "Establecer pie de página",
+    "confirmCreate": "Crear Panel",
+    "editingPanel": "Edición de panel",
+    "editingPanelDesc": "Actualizando panel: {{id}}",
+    "buttonStyleField": "Estilo del botón",
+    "buttonStyles": {
+      "primary": "Primario",
+      "secondary": "Secundario",
+      "success": "Éxito",
+      "danger": "Peligro",
+      "link": "Enlace"
+    },
+    "supportRolesField": "Roles de soporte",
+    "noAdditionalRoles": "No hay roles adicionales configurados",
+    "imageField": "Imagen del panel",
+    "imageNotSet": "No se ha configurado una imagen",
+    "footerField": "Pie del panel",
+    "footerNotSet": "No se ha configurado un pie",
+    "categoryField": "Categoría",
+    "panelStatus": "Estado del panel",
+    "panelActive": "Activo",
+    "panelInactive": "Inactivo",
+    "welcomeMessageField": "Mensaje de bienvenida",
+    "selectFieldToEdit": "Seleccione un campo para editar",
+    "deactivatePanel": "Desactivar panel",
+    "activatePanel": "Activar panel",
+    "closeEditor": "Cerrar editor",
+    "fields": {
+      "title": "Título",
+      "description": "Descripción",
+      "buttonLabel": "Etiqueta del botón",
+      "buttonStyle": "Estilo del botón",
+      "supportRoles": "Roles de soporte",
+      "image": "Imagen del panel",
+      "footer": "Pie del panel",
+      "category": "Categoría",
+      "maxTickets": "Máx. tickets por usuario",
+      "welcomeMessage": "Mensaje de bienvenida"
+    },
+    "modals": {
+      "timeout": "El tiempo de respuesta expiró. Inténtalo de nuevo.",
+      "addRolesTitle": "Agregar roles de soporte",
+      "addRolesLabel": "ID de roles (uno por línea o separados por espacios)",
+      "noRolesProvided": "No se proporcionaron roles.",
+      "rolesAdded": "{{count}} rol(es) agregado(s).",
+      "imageTitle": "Establecer imagen del panel",
+      "imageLabel": "URL de la imagen",
+      "imageSet": "Imagen del panel actualizada.",
+      "imageCleared": "Imagen del panel eliminada.",
+      "footerTitle": "Establecer pie del panel",
+      "footerLabel": "Texto del pie",
+      "footerPlaceholder": "Texto opcional para el pie",
+      "footerSet": "Pie del panel actualizado.",
+      "footerCleared": "Pie del panel eliminado.",
+      "titleTitle": "Actualizar título del panel",
+      "titleLabel": "Título del panel",
+      "descriptionTitle": "Actualizar descripción del panel",
+      "descriptionLabel": "Descripción del panel",
+      "buttonLabelTitle": "Actualizar etiqueta del botón",
+      "buttonLabel": "Etiqueta del botón",
+      "buttonStyleTitle": "Actualizar estilo del botón",
+      "buttonStyleLabel": "Estilo del botón",
+      "supportRolesTitle": "Actualizar roles de soporte",
+      "supportRolesLabel": "ID de roles (uno por línea)",
+      "categoryTitle": "Establecer categoría del ticket",
+      "categoryLabel": "ID de la categoría",
+      "categoryPlaceholder": "Deja en blanco para limpiar",
+      "maxTicketsTitle": "Establecer máximo de tickets",
+      "maxTicketsLabel": "Máximo de tickets por usuario",
+      "welcomeTitle": "Actualizar mensaje de bienvenida",
+      "welcomeLabel": "Mensaje de bienvenida (opcional)"
+    },
+    "errors": {
+      "invalidImageUrl": "Proporcione una URL HTTP o HTTPS válida.",
+      "emptyField": "Este campo no puede estar vacío.",
+      "invalidButtonStyle": "Estilo de botón no válido. Usa primary, secondary, success, danger o link.",
+      "invalidMaxTickets": "El máximo de tickets debe ser un número entre 1 y 10."
+    },
+    "messages": {
+      "titleUpdated": "Título del panel actualizado.",
+      "descriptionUpdated": "Descripción del panel actualizada.",
+      "buttonLabelUpdated": "Etiqueta del botón actualizada.",
+      "buttonStyleUpdated": "Estilo del botón actualizado.",
+      "supportRolesUpdated": "Roles de soporte actualizados ({{count}} en total).",
+      "supportRolesCleared": "Se eliminaron todos los roles de soporte.",
+      "categoryUpdated": "Categoría del ticket establecida en {{channel}}.",
+      "categoryCleared": "Categoría del ticket eliminada.",
+      "maxTicketsUpdated": "Máximo de tickets por usuario establecido en {{count}}.",
+      "welcomeUpdated": "Mensaje de bienvenida actualizado.",
+      "welcomeCleared": "Mensaje de bienvenida eliminado.",
+      "panelActivated": "Panel activado.",
+      "panelDeactivated": "Panel desactivado."
+    },
+    "panelCreated": "Panel Creado",
+    "panelCreatedDesc": "¡El panel '{{id}}' se ha creado exitosamente!",
+    "nextStep": "Siguiente Paso",
+    "useLoadCommand": "Use `/ticket panel load {{id}}` para enviar este panel a un canal",
+    "panelLoaded": "El panel '{{id}}' ha sido enviado a {{channel}}",
+    "panelDeleted": "El panel '{{id}}' ha sido eliminado",
+    "noPanels": "No se encontraron paneles de tickets en este servidor",
+    "panelList": "Paneles de Tickets",
+    "status": "Estado",
+    "created": "Creado",
+    "notInTicket": "Este comando debe usarse en un canal de tickets",
+    "claimSuccess": "Has reclamado exitosamente este ticket",
+    "closing": "Cerrando ticket en 5 segundos...",
+    "statistics": "Estadísticas de Tickets",
+    "totalTickets": "Tickets Totales",
+    "openTickets": "Tickets Abiertos",
+    "claimedTickets": "Tickets Reclamados",
+    "closedTickets": "Tickets Cerrados",
+    "lockedTickets": "Tickets Bloqueados",
+    "frozenTickets": "Tickets Congelados",
+    "panelNotFound": "Panel de tickets no encontrado o inactivo",
+    "ticketNotFound": "Ticket no encontrado",
+    "ticketLocked": "Ticket Bloqueado",
+    "ticketLockedDesc": "Este ticket ha sido bloqueado. El usuario ya no puede enviar mensajes.",
+    "ticketFrozen": "Ticket Congelado",
+    "ticketFrozenDesc": "Este ticket ha sido congelado. Nadie puede enviar mensajes excepto los administradores.",
+    "ticketClaimed": "Ticket Reclamado",
+    "notSupportStaff": "Debes ser personal de soporte para reclamar tickets",
+    "ticketCreatedDesc": "Tu ticket ha sido creado en {{channel}}",
+    "closingWithReason": "Cerrando ticket con razón: {{reason}}"
+  },
+  "xp": {
+    "description": "Comandos del sistema XP",
+    "rank": {
+      "description": "Ver tu tarjeta de rango XP",
+      "noData": "{{user}} aún no ha ganado XP"
+    },
+    "leaderboard": {
+      "description": "Ver la tabla de clasificación XP del servidor",
+      "title": "Tabla de Clasificación XP de {{guild}}",
+      "noData": "No se encontraron datos XP para este servidor",
+      "entry": "Nivel {{level}} • {{xp}} XP",
+      "footer": "Página {{page}} de {{total}}",
+      "previous": "Anterior",
+      "next": "Siguiente"
+    },
+    "configuration": {
+      "description": "Ver la configuración actual de XP",
+      "title": "Configuración XP",
+      "status": "Sistema XP",
+      "perMessage": "XP por Mensaje",
+      "perVoiceMinute": "XP por Minuto de Voz",
+      "cooldown": "Tiempo de Espera de Mensaje",
+      "levelUpAnnounce": "Anuncios de Subida de Nivel",
+      "levelUpChannel": "Canal de Subida de Nivel",
+      "boosterRole": "Rol Booster",
+      "multiplier": "multiplicador",
+      "roleRewards": "Recompensas de Rol",
+      "level": "Nivel",
+      "andMore": "y más...",
+      "ignoredChannels": "Canales Ignorados",
+      "noXpChannels": "Canales Sin XP",
+      "doubleXpChannels": "Canales de Doble XP",
+      "channels": "canales",
+      "specialChannels": "Canales Especiales",
+      "footer": "Usa /config xp para modificar estos ajustes"
+    },
+    "card": {
+      "description": "Personaliza los colores de tu tarjeta de rango",
+      "modalTitle": "Personalizar Tarjeta de Rango",
+      "backgroundColor": "Color de Fondo",
+      "progressBarColor": "Color de Barra de Progreso",
+      "textColor": "Color de Texto",
+      "accentColor": "Color de Acento",
+      "invalidColor": "Formato de color inválido para {{color}}: {{value}}. Por favor usa el formato hex (#RRGGBB)",
+      "savedTitle": "Tarjeta de Rango Personalizada",
+      "savedDescription": "¡Los colores de tu tarjeta de rango han sido actualizados!",
+      "savedNoPreview": "¡Los colores de tu tarjeta de rango han sido guardados! Usa /xp rank para ver tu nuevo diseño."
+    },
+    "levelUp": {
+      "title": "¡Subida de Nivel!",
+      "defaultMessage": "¡{{user}} ha alcanzado el nivel {{level}}!",
+      "rolesEarned": "Roles Obtenidos"
+    }
+  },
+  "config": {
+    "xp": {
+      "announcements": {
+        "enabled": "Anuncios de subida de nivel habilitados",
+        "disabled": "Anuncios de subida de nivel deshabilitados",
+        "channelSet": "Los anuncios de subida de nivel se enviarán en {{channel}}",
+        "channelCleared": "Canal de anuncios de subida de nivel restablecido"
+      }
+    }
+  }
+}

@@ -8,19 +8,18 @@ import { initializeI18n } from './i18n';
 import { startAPIServer } from './api/server';
 import type { Command } from './types/command';
 
-//Extend DiscordJS Client
 declare module 'discord.js' {
-    interface Client {
-        commands: Collection<string, Command>;
-        cooldowns: Collection<string, Collection<string, number>>;
-    }
+  interface Client {
+    commands: Collection<string, Command>;
+    cooldowns: Collection<string, Collection<string, number>>;
+  }
 }
 
-class Commisar extends Client {
-    public commands: Collection<string, Command> = new Collection();
-    public cooldowns: Collection<string, Collection<string, number>> = new Collection();
+class Commissar extends Client {
+  public commands: Collection<string, Command> = new Collection();
+  public cooldowns: Collection<string, Collection<string, number>> = new Collection();
 
-     constructor() {
+  constructor() {
     super({
       intents: [
         GatewayIntentBits.Guilds,
@@ -57,10 +56,9 @@ class Commisar extends Client {
         ],
       },
     });
-     }
-    }
+  }
 
-    public async start(): Promise<void> {
+  public async start(): Promise<void> {
     try {
       // Initialize i18n
       logger.info(chalk.blue('Initializing i18n...'));
@@ -139,4 +137,3 @@ void bot.start();
 
 // Export client for API access
 export const client = bot;
-

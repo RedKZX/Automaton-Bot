@@ -16,6 +16,7 @@ import { logger } from '../../utils/logger';
 import { refreshXPConfigEmbed } from '../buttons/configButtons';
 import { buildModLogsConfigResponse } from '../../commands/configuration/config';
 import type { ModLogCategory } from '../../types';
+import { getgid } from 'process';
 
 const MOD_LOG_CATEGORY_NAME_KEYS: Record<ModLogCategory, string> = {
   message: 'config.modlogs.categories.message.name',
